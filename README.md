@@ -4,9 +4,9 @@ This repository contains scripts and configurations to prepare proteomics quanti
 
 ## 🔍 Workflow Overview
 
-1. **Input files**:
-   - `proteinGroups.txt` (from MaxQuant)
-   - `experimentalDesignTemplate.txt` (mapping TMT channels to sample names)
+1. **Input files** (place them inside the `data/` folder):
+   - `proteinGroups.txt`: main MaxQuant output with protein intensities (tab-separated `.txt`)
+   - `mapping_table.tsv`: a two-column file mapping intensity column names to sample names.
 
 2. **Processing steps**:
    - Selection of reporter intensity columns corresponding to real biological samples
@@ -16,7 +16,7 @@ This repository contains scripts and configurations to prepare proteomics quanti
    - Generation of `quant_input.csv` as input for PROTRIDER
    - *(Optional)* generation of `covariates.csv` with metadata (e.g., batch, sample group)
 
-3. **Output files**:
-   - `quant_input.csv`
-   - `covariates.csv` *(if applicable)*
-   - `config.yaml` for running PROTRIDER
+3. **Output files** (saved under the `output/` directory):
+   - `quant_input.tsv`: input matrix for PROTRIDER (proteins × samples, tab-separated)
+   - `covariates.csv`: *(optional)* metadata for samples (batch, sex, etc.)
+   - `config.yaml`: configuration file for running PROTRIDER
