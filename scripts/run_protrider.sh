@@ -1,0 +1,1 @@
+protrider --config ../../PROTRIDER/config.yaml --input_intensities ../output/quant_input.tsv --sample_annotation ../output/covariates.tsv
